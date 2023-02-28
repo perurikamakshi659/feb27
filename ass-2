@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+main() {
+    int num, digit, sum;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    while (num > 9) {
+        sum = 0;
+        while (num != 0) {
+            digit = num % 10;
+            sum += digit;
+            num /= 10;
+        }
+        num = sum;
+    }
+    printf("The single digit sum is: %d\n", num);
+}
